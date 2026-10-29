@@ -25,7 +25,7 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-darkBg text-white min-h-screen flex flex-col antialiased">
+<body class="bg-darkBg text-white h-screen flex flex-col antialiased overflow-hidden">
 
     <!-- Hidden HTML Source of Truth: Añade o modifica tus unidades, clases y enlaces de YouTube reales aquí -->
     <div id="html-course-source" class="hidden">
@@ -96,66 +96,66 @@
     </div>
 
     <!-- Main Navigation Bar -->
-    <header class="h-16 bg-neutral-900 border-b border-darkBorder px-6 flex items-center justify-between z-20 flex-shrink-0">
+    <header class="h-14 bg-neutral-900 border-b border-darkBorder px-6 flex items-center justify-between z-20 flex-shrink-0">
         <div class="flex items-center space-x-4">
-            <span class="text-base font-bold text-orange-500 tracking-wide">Academy España</span>
+            <span class="text-sm font-bold text-orange-500 tracking-wide">Academy España</span>
             <span class="text-xs px-2.5 py-1 bg-neutral-800 text-gray-300 rounded-md border border-darkBorder hidden sm:inline-block" id="overall-progress-text">0% Completado</span>
         </div>
         <div class="flex items-center space-x-3">
-            <div class="flex items-center space-x-2 bg-neutral-800 px-3 py-1.5 rounded-lg border border-darkBorder">
+            <div class="flex items-center space-x-2 bg-neutral-800 px-3 py-1 rounded-lg border border-darkBorder">
                 <span class="text-xs text-gray-400 hidden sm:inline">Seleccionar clase:</span>
                 <select id="lesson-select" onchange="jumpToSelectedLesson(this.value)" class="bg-neutral-900 text-xs text-gray-200 border border-darkBorder rounded px-2 py-1 outline-none focus:border-orange-500 cursor-pointer">
                     <!-- Generado dinámicamente -->
                 </select>
             </div>
-            <button id="sidebar-toggle" class="lg:hidden px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-xs font-semibold text-gray-200 border border-darkBorder">
+            <button id="sidebar-toggle" class="lg:hidden px-3 py-1 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-xs font-semibold text-gray-200 border border-darkBorder">
                 Temario
             </button>
         </div>
     </header>
 
-    <!-- Main Content Workspace -->
+    <!-- Main Content Workspace (Optimizado para laptop sin scroll de ventana) -->
     <div class="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
         <!-- Left Video & Description Section -->
-        <main class="flex-1 overflow-y-auto p-4 lg:p-8 flex flex-col space-y-6">
+        <main class="flex-1 overflow-y-auto p-3 lg:p-5 flex flex-col space-y-3 justify-between">
             <!-- Header Breadcrumb & Controls -->
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 flex-shrink-0">
                 <div>
-                    <span id="module-title-badge" class="text-xs font-semibold text-orange-400 tracking-wider uppercase bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20">Cargando modulo...</span>
-                    <h1 id="current-lesson-title" class="text-xl lg:text-2xl font-bold text-white mt-2">Cargando clase...</h1>
+                    <span id="module-title-badge" class="text-[11px] font-semibold text-orange-400 tracking-wider uppercase bg-orange-500/10 px-2.5 py-0.5 rounded-full border border-orange-500/20">Cargando modulo...</span>
+                    <h1 id="current-lesson-title" class="text-lg lg:text-xl font-bold text-white mt-1">Cargando clase...</h1>
                 </div>
                 <!-- Indicador central de Unidad y Botones de Navegacion -->
-                <div class="flex items-center space-x-3 flex-shrink-0">
-                    <span id="unit-indicator-badge" class="text-xs px-3 py-2 bg-neutral-800 border border-darkBorder text-gray-300 rounded-lg font-medium">Unidad 1 de 8</span>
-                    <button onclick="navigateLesson(-1)" class="px-3 py-2 bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold rounded-lg transition border border-darkBorder text-gray-300">Anterior</button>
-                    <button onclick="navigateLesson(1)" class="px-3 py-2 bg-orange-600 hover:bg-orange-500 text-xs font-semibold rounded-lg transition text-white shadow-md">Siguiente</button>
+                <div class="flex items-center space-x-2 flex-shrink-0">
+                    <span id="unit-indicator-badge" class="text-xs px-2.5 py-1.5 bg-neutral-800 border border-darkBorder text-gray-300 rounded-lg font-medium">Unidad 1 de 8</span>
+                    <button onclick="navigateLesson(-1)" class="px-2.5 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold rounded-lg transition border border-darkBorder text-gray-300">Anterior</button>
+                    <button onclick="navigateLesson(1)" class="px-3 py-1.5 bg-orange-600 hover:bg-orange-500 text-xs font-semibold rounded-lg transition text-white shadow-md">Siguiente</button>
                 </div>
             </div>
 
-            <!-- YouTube Video Player Frame (Responsive 16:9) -->
-            <div class="w-full bg-black rounded-2xl overflow-hidden shadow-2xl border border-darkBorder relative aspect-video">
+            <!-- YouTube Video Player Frame (Responsive 16:9 ajustado para no generar scroll) -->
+            <div class="w-full bg-black rounded-xl overflow-hidden shadow-2xl border border-darkBorder relative flex-shrink-0 max-h-[52vh] aspect-video mx-auto">
                 <iframe id="youtube-iframe" class="w-full h-full absolute inset-0 border-0" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <!-- Lesson Info & Completion Bar -->
-            <div class="bg-neutral-900/80 border border-darkBorder rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div>
-                    <h3 class="text-xs uppercase tracking-wider font-bold text-gray-400">Detalles de la leccion</h3>
-                    <p id="lesson-description" class="text-xs text-gray-300 mt-1">Cargando informacion detallada...</p>
+            <div class="bg-neutral-900/90 border border-darkBorder rounded-xl p-3 lg:px-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 flex-shrink-0">
+                <div class="overflow-hidden">
+                    <h3 class="text-[10px] uppercase tracking-wider font-bold text-gray-400">Detalles de la leccion</h3>
+                    <p id="lesson-description" class="text-xs text-gray-300 truncate mt-0.5">Cargando informacion detallada...</p>
                 </div>
-                <button id="complete-btn" onclick="markCurrentComplete()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold rounded-xl transition text-white shadow-md flex-shrink-0">
+                <button id="complete-btn" onclick="markCurrentComplete()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold rounded-lg transition text-white shadow-md flex-shrink-0">
                     Marcar como Completo
                 </button>
             </div>
         </main>
 
         <!-- Right Sidebar (Temario 8 Unidades) -->
-        <aside id="sidebar" class="w-full lg:w-96 bg-neutral-900 border-l border-darkBorder flex flex-col h-full lg:static absolute inset-0 z-10 hidden lg:flex">
-            <div class="p-4 border-b border-darkBorder flex items-center justify-between flex-shrink-0">
-                <h3 class="text-sm font-bold text-gray-200">Temario (8 Unidades / 40 Clases)</h3>
+        <aside id="sidebar" class="w-full lg:w-80 bg-neutral-900 border-l border-darkBorder flex flex-col h-full lg:static absolute inset-0 z-10 hidden lg:flex">
+            <div class="p-3 border-b border-darkBorder flex items-center justify-between flex-shrink-0">
+                <h3 class="text-xs font-bold text-gray-200">Temario (8 Unidades / 40 Clases)</h3>
                 <button onclick="document.getElementById('sidebar').classList.add('hidden')" class="lg:hidden text-xs text-gray-400 hover:text-white px-2 py-1 bg-neutral-800 rounded">Cerrar</button>
             </div>
-            <div id="modules-container" class="flex-1 overflow-y-auto p-4 space-y-3">
+            <div id="modules-container" class="flex-1 overflow-y-auto p-3 space-y-2">
                 <!-- Generado dinámicamente -->
             </div>
         </aside>
@@ -259,18 +259,18 @@
                 const modPercent = Math.round((modCompletedCount / modTotal) * 100);
 
                 const moduleDiv = document.createElement('div');
-                moduleDiv.className = "bg-neutral-900 border border-darkBorder rounded-xl overflow-hidden";
+                moduleDiv.className = "bg-neutral-900 border border-darkBorder rounded-lg overflow-hidden";
 
                 const headerBtn = document.createElement('button');
-                headerBtn.className = "w-full p-3 flex items-center justify-between text-left bg-neutral-900/50 hover:bg-neutral-800 transition cursor-pointer";
+                headerBtn.className = "w-full p-2.5 flex items-center justify-between text-left bg-neutral-900/50 hover:bg-neutral-800 transition cursor-pointer";
                 headerBtn.innerHTML = `
-                    <div class="flex items-center space-x-3 pr-2">
-                        <div class="w-6 h-6 rounded-full bg-darkBorder flex items-center justify-center text-xs font-bold text-gray-300 flex-shrink-0">
+                    <div class="flex items-center space-x-2.5 pr-2">
+                        <div class="w-5 h-5 rounded-full bg-darkBorder flex items-center justify-center text-[10px] font-bold text-gray-300 flex-shrink-0">
                             ${mIdx + 1}
                         </div>
                         <div class="overflow-hidden">
                             <h4 class="text-xs font-semibold text-gray-200 truncate">${mod.title}</h4>
-                            <span class="text-[10px] text-gray-400">${modPercent}% completado</span>
+                            <span class="text-[9px] text-gray-400">${modPercent}% completado</span>
                         </div>
                     </div>
                     <span class="text-xs text-gray-400 font-bold">${isCurrentModule ? '[-]' : '[+]'}</span>
@@ -293,7 +293,7 @@
                     const isSelected = (mIdx === currentModuleIndex && lIdx === currentLessonIndex);
                     
                     const lessonItem = document.createElement('div');
-                    lessonItem.className = `p-3 flex items-center justify-between cursor-pointer transition ${isSelected ? 'bg-orange-500/10 border-l-4 border-orange-500' : 'hover:bg-neutral-800/40'}`;
+                    lessonItem.className = `p-2.5 flex items-center justify-between cursor-pointer transition ${isSelected ? 'bg-orange-500/10 border-l-4 border-orange-500' : 'hover:bg-neutral-800/40'}`;
                     
                     lessonItem.onclick = () => {
                         currentModuleIndex = mIdx;
@@ -304,17 +304,17 @@
                     };
 
                     lessonItem.innerHTML = `
-                        <div class="flex items-center space-x-3 pr-2 overflow-hidden">
-                            <div class="w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center text-[10px] font-semibold ${lesson.completed ? 'bg-emerald-500/20 text-emerald-400' : 'bg-darkBorder text-gray-400'}">
+                        <div class="flex items-center space-x-2.5 pr-2 overflow-hidden">
+                            <div class="w-5 h-5 rounded-md flex-shrink-0 flex items-center justify-center text-[9px] font-semibold ${lesson.completed ? 'bg-emerald-500/20 text-emerald-400' : 'bg-darkBorder text-gray-400'}">
                                 ${lIdx + 1}
                             </div>
                             <div class="overflow-hidden">
                                 <p class="text-xs font-medium truncate ${isSelected ? 'text-orange-400 font-bold' : 'text-gray-300'}">${lesson.title}</p>
-                                ${isSelected ? '<span class="text-[10px] text-orange-400 font-semibold tracking-wider block mt-0.5">Tocando ahora</span>' : `<span class="text-[10px] text-gray-500 block">Duracion: ${lesson.duration}</span>`}
+                                ${isSelected ? '<span class="text-[9px] text-orange-400 font-semibold tracking-wider block mt-0.5">Tocando ahora</span>' : `<span class="text-[9px] text-gray-500 block">Duracion: ${lesson.duration}</span>`}
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <span class="text-xs font-bold ${lesson.completed ? 'text-emerald-500' : 'text-gray-600'}">${lesson.completed ? 'OK' : '--'}</span>
+                            <span class="text-[11px] font-bold ${lesson.completed ? 'text-emerald-500' : 'text-gray-600'}">${lesson.completed ? 'OK' : '--'}</span>
                         </div>
                     `;
 
