@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy España - Plataforma de Cursos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#121212',
+                        darkPanel: '#181818',
+                        darkBorder: '#282828',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-darkBg text-white min-h-screen flex flex-col antialiased">
+
+    <!-- Hidden HTML Source of Truth: Añade o modifica tus unidades, clases y enlaces de YouTube reales aquí -->
+    <div id="html-course-source" class="hidden">
+        <!-- Unidad 1 -->
+        <div class="course-unit" data-title="Unidad 1: Fundamentos y Creacion de Cuenta">
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="10:15" data-desc="Conoce los lineamientos generales del programa y preparate para empezar.">Clase 1: Introduccion a la plataforma y objetivos</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="12:30" data-desc="Como completar tu registro de manera correcta sin errores comunes.">Clase 2: Registro de usuario paso a paso</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="08:45" data-desc="Personaliza tu cuenta con tus datos reales y preferencias.">Clase 3: Configuracion del perfil personal</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="11:20" data-desc="Establece contraseñas robustas y métodos de verificación.">Clase 4: Configuracion de seguridad y claves</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="15:00" data-desc="Repaso general de los conceptos aprendidos en la primera unidad.">Clase 5: Evaluacion inicial de conocimientos</div>
+        </div>
+        <!-- Unidad 2 -->
+        <div class="course-unit" data-title="Unidad 2: Exploracion del Panel de Control">
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="14:10" data-desc="Identifica cada seccion disponible en tu panel de control.">Clase 1: Tour general por el menu principal</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="16:25" data-desc="Como buscar y filtrar los mejores productos o contenidos.">Clase 2: Seccion de mercado y catalogo</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="09:50" data-desc="Interpreta tus estadisticas de acceso y avance diario.">Clase 3: Analisis de metricas y reportes</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="07:30" data-desc="Gestiona tus alertas por correo y avisos importantes.">Clase 4: Configuracion avanzada de notificaciones</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="13:40" data-desc="Respuestas a los problemas mas comunes al navegar.">Clase 5: Resolucion de dudas frecuentes del panel</div>
+        </div>
+        <!-- Unidad 3 -->
+        <div class="course-unit" data-title="Unidad 3: Investigacion y Nichos de Mercado">
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="12:00" data-desc="Aprende a sectorizar audiencias interesadas en temas especificos.">Clase 1: Que es un nicho de mercado</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="15:10" data-desc="Descubre en que areas tienes mayor potencial de enseñanza.">Clase 2: Identificacion de pasiones y habilidades</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="18:20" data-desc="Herramientas para comprobar si hay personas buscando tu tema.">Clase 3: Validacion de demanda en internet</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="14:45" data-desc="Estudia que estan haciendo otros creadores en tu misma area.">Clase 4: Analisis de la competencia directa</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="11:00" data-desc="Toma la decision final basada en datos reales de mercado.">Clase 5: Seleccion definitiva de tu nicho</div>
+        </div>
+        <!-- Unidad 4 -->
+        <div class="course-unit" data-title="Unidad 4: Creacion y Definicion de Oferta">
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="16:00" data-desc="Define que hace unico tu contenido frente a los demas.">Clase 1: Estructurando una propuesta de valor</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="13:30" data-desc="Como calcular el valor economico adecuado para tus clases.">Clase 2: Determinacion de precios y costos</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="17:15" data-desc="Estrategias pedagogicas para mantener la atencion del estudiante.">Clase 3: Diseño de la metodologia de enseñanza</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="10:45" data-desc="Agrega valor adicional a tu oferta principal con recursos extra.">Clase 4: Creacion de bonos y complementos</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="14:20" data-desc="Checklist completo antes de lanzar tu propuesta al publico.">Clase 5: Revision final de la oferta comercial</div>
+        </div>
+        <!-- Unidad 5 -->
+        <div class="course-unit" data-title="Unidad 5: Produccion de Contenido en Video">
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="15:00" data-desc="Que camaras, microfonos e iluminacion necesitas sin gastar de mas.">Clase 1: Equipamiento basico de grabacion</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="12:10" data-desc="Tecnicas profesionales para que tus alumnos te escuchen con claridad.">Clase 2: Configuracion de audio y eliminacion de ruido</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="14:35" data-desc="Como redactar un guion fluido que evite silencios o repeticiones.">Clase 3: Guiones y estructuracion de clases</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="19:00" data-desc="Software y consejos para grabar tu monitor de forma nitida.">Clase 4: Grabacion de pantalla y tutoriales</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="21:30" data-desc="Corta los errores y deja tus videos listos para subir.">Clase 5: Introduccion basica a la edicion de video</div>
+        </div>
+        <!-- Unidad 6 -->
+        <div class="course-unit" data-title="Unidad 6: Estrategias de Difusion y Alcance">
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="13:20" data-desc="Donde y como promocionar tus lecciones de manera organica.">Clase 1: Uso de redes sociales para captar alumnos</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="11:45" data-desc="Aprovecha formatos cortos para generar interes masivo.">Clase 2: Creacion de contenidos cortos de atraccion</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="16:10" data-desc="Fomenta la participacion y el compañerismo entre estudiantes.">Clase 3: Creacion de comunidad activa</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="15:00" data-desc="Como colaborar con colegas para crecer en conjunto.">Clase 4: Alianzas estrategicas con otros creadores</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="10:55" data-desc="Mide que canales te traen mejores resultados de matricula.">Clase 5: Analisis de resultados de promocion</div>
+        </div>
+        <!-- Unidad 7 -->
+        <div class="course-unit" data-title="Unidad 7: Retencion y Evaluacion del Estudiante">
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="09:30" data-desc="Como evitar la desercion y mantener motivados a tus alumnos.">Clase 1: Importancia de la finalizacion de cursos</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="14:50" data-desc="Diseña pruebas efectivas para comprobar el aprendizaje.">Clase 2: Creacion de cuestionarios y examenes</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="12:00" data-desc="Reconoce el esfuerzo de tus estudiantes al terminar el programa.">Clase 3: Emision de certificados de finalizacion</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="11:15" data-desc="Como pedir reseñas constructivas para mejorar futuras ediciones.">Clase 4: Recopilacion de testimonios y opiniones</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="22:40" data-desc="Interactua directamente con tu audiencia para resolver dudas.">Clase 5: Sesiones de preguntas y respuestas en vivo</div>
+        </div>
+        <!-- Unidad 8 -->
+        <div class="course-unit" data-title="Unidad 8: Escalabilidad y Nuevos Proyectos">
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="17:30" data-desc="Estrategias para pasar de un curso a una academia completa.">Clase 1: Como escalar tu negocio educativo</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="15:20" data-desc="Herramientas digitales para ahorrar tiempo en la gestion diaria.">Clase 2: Automatizacion de procesos repetitivos</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="14:10" data-desc="Ofrece nuevos niveles de formacion a tus alumnos graduados.">Clase 3: Creacion de cursos avanzados o secuelas</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="13:00" data-desc="Administra tus ingresos para hacer crecer tu proyecto sosteniblemente.">Clase 4: Gestion financiera y reinversion</div>
+            <div class="course-lesson" data-url="7iobxzd_2wY" data-duration="10:00" data-desc="Reflexion final y plan de accion para tu futuro profesional.">Clase 5: Cierre del curso y proximos pasos</div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="h-16 bg-neutral-900 border-b border-darkBorder px-6 flex items-center justify-between z-20 flex-shrink-0">
+        <div class="flex items-center space-x-4">
+            <span class="text-base font-bold text-orange-500 tracking-wide">Academy España</span>
+            <span class="text-xs px-2.5 py-1 bg-neutral-800 text-gray-300 rounded-md border border-darkBorder hidden sm:inline-block" id="overall-progress-text">0% Completado</span>
+        </div>
+        <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-2 bg-neutral-800 px-3 py-1.5 rounded-lg border border-darkBorder">
+                <span class="text-xs text-gray-400 hidden sm:inline">Seleccionar clase:</span>
+                <select id="lesson-select" onchange="jumpToSelectedLesson(this.value)" class="bg-neutral-900 text-xs text-gray-200 border border-darkBorder rounded px-2 py-1 outline-none focus:border-orange-500 cursor-pointer">
+                    <!-- Generado dinámicamente -->
+                </select>
+            </div>
+            <button id="sidebar-toggle" class="lg:hidden px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-xs font-semibold text-gray-200 border border-darkBorder">
+                Temario
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Workspace -->
+    <div class="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+        <!-- Left Video & Description Section -->
+        <main class="flex-1 overflow-y-auto p-4 lg:p-8 flex flex-col space-y-6">
+            <!-- Header Breadcrumb & Controls -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                    <span id="module-title-badge" class="text-xs font-semibold text-orange-400 tracking-wider uppercase bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20">Cargando modulo...</span>
+                    <h1 id="current-lesson-title" class="text-xl lg:text-2xl font-bold text-white mt-2">Cargando clase...</h1>
+                </div>
+                <!-- Indicador central de Unidad y Botones de Navegacion -->
+                <div class="flex items-center space-x-3 flex-shrink-0">
+                    <span id="unit-indicator-badge" class="text-xs px-3 py-2 bg-neutral-800 border border-darkBorder text-gray-300 rounded-lg font-medium">Unidad 1 de 8</span>
+                    <button onclick="navigateLesson(-1)" class="px-3 py-2 bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold rounded-lg transition border border-darkBorder text-gray-300">Anterior</button>
+                    <button onclick="navigateLesson(1)" class="px-3 py-2 bg-orange-600 hover:bg-orange-500 text-xs font-semibold rounded-lg transition text-white shadow-md">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- YouTube Video Player Frame (Responsive 16:9) -->
+            <div class="w-full bg-black rounded-2xl overflow-hidden shadow-2xl border border-darkBorder relative aspect-video">
+                <iframe id="youtube-iframe" class="w-full h-full absolute inset-0 border-0" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Lesson Info & Completion Bar -->
+            <div class="bg-neutral-900/80 border border-darkBorder rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-xs uppercase tracking-wider font-bold text-gray-400">Detalles de la leccion</h3>
+                    <p id="lesson-description" class="text-xs text-gray-300 mt-1">Cargando informacion detallada...</p>
+                </div>
+                <button id="complete-btn" onclick="markCurrentComplete()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold rounded-xl transition text-white shadow-md flex-shrink-0">
+                    Marcar como Completo
+                </button>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Temario 8 Unidades) -->
+        <aside id="sidebar" class="w-full lg:w-96 bg-neutral-900 border-l border-darkBorder flex flex-col h-full lg:static absolute inset-0 z-10 hidden lg:flex">
+            <div class="p-4 border-b border-darkBorder flex items-center justify-between flex-shrink-0">
+                <h3 class="text-sm font-bold text-gray-200">Temario (8 Unidades / 40 Clases)</h3>
+                <button onclick="document.getElementById('sidebar').classList.add('hidden')" class="lg:hidden text-xs text-gray-400 hover:text-white px-2 py-1 bg-neutral-800 rounded">Cerrar</button>
+            </div>
+            <div id="modules-container" class="flex-1 overflow-y-auto p-4 space-y-3">
+                <!-- Generado dinámicamente -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- Notification Toast Modal -->
+    <div id="toast-modal" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-neutral-900 border border-orange-500/40 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center space-x-3">
+            <span id="toast-message" class="text-xs font-medium">Notificacion</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        let courseData = [];
+        let currentModuleIndex = 0;
+        let currentLessonIndex = 0;
+
+        // Parse course structure from HTML tags automatically
+        function parseCourseFromHTML() {
+            const unitElements = document.querySelectorAll('#html-course-source .course-unit');
+            courseData = [];
+            let globalIndex = 0;
+
+            unitElements.forEach((unitEl, mIdx) => {
+                const unitTitle = unitEl.getAttribute('data-title');
+                const lessonElements = unitEl.querySelectorAll('.course-lesson');
+                const lessons = [];
+
+                lessonElements.forEach((lessonEl, lIdx) => {
+                    lessons.push({
+                        id: `u${mIdx+1}-l${lIdx+1}`,
+                        globalIdx: globalIndex++,
+                        title: lessonEl.innerText.trim(),
+                        youtubeId: lessonEl.getAttribute('data-url'),
+                        duration: lessonEl.getAttribute('data-duration') || "10:00",
+                        description: lessonEl.getAttribute('data-desc') || "Leccion del curso oficial.",
+                        completed: false
+                    });
+                });
+
+                courseData.push({
+                    id: mIdx + 1,
+                    title: unitTitle,
+                    lessons: lessons
+                });
+            });
+        }
+
+        window.onload = function() {
+            parseCourseFromHTML();
+            renderSidebar();
+            populateLessonSelect();
+            loadCurrentLesson();
+            updateOverallProgress();
+        };
+
+        // Populate the dropdown select menu sequentially across all units
+        function populateLessonSelect() {
+            const selectEl = document.getElementById('lesson-select');
+            if (!selectEl) return;
+            selectEl.innerHTML = "";
+
+            courseData.forEach((mod, mIdx) => {
+                const optGroup = document.createElement('optgroup');
+                optGroup.label = mod.title;
+
+                mod.lessons.forEach((lesson, lIdx) => {
+                    const option = document.createElement('option');
+                    option.value = `${mIdx}-${lIdx}`;
+                    // Muestra numeración secuencial global (Ej: Clase 1 al 40)
+                    option.innerText = `Clase ${lesson.globalIdx + 1}: ${lesson.title.replace(/^Clase\s*\d+:\s*/i, '')}`;
+                    if (mIdx === currentModuleIndex && lIdx === currentLessonIndex) {
+                        option.selected = true;
+                    }
+                    optGroup.appendChild(option);
+                });
+
+                selectEl.appendChild(optGroup);
+            });
+        }
+
+        function jumpToSelectedLesson(value) {
+            const parts = value.split('-');
+            currentModuleIndex = parseInt(parts[0]);
+            currentLessonIndex = parseInt(parts[1]);
+            renderSidebar();
+            loadCurrentLesson();
+        }
+
+        // Render Sidebar units and lessons
+        function renderSidebar() {
+            const container = document.getElementById('modules-container');
+            if (!container) return;
+            container.innerHTML = "";
+
+            courseData.forEach((mod, mIdx) => {
+                const isCurrentModule = mIdx === currentModuleIndex;
+                const modCompletedCount = mod.lessons.filter(l => l.completed).length;
+                const modTotal = mod.lessons.length;
+                const modPercent = Math.round((modCompletedCount / modTotal) * 100);
+
+                const moduleDiv = document.createElement('div');
+                moduleDiv.className = "bg-neutral-900 border border-darkBorder rounded-xl overflow-hidden";
+
+                const headerBtn = document.createElement('button');
+                headerBtn.className = "w-full p-3 flex items-center justify-between text-left bg-neutral-900/50 hover:bg-neutral-800 transition cursor-pointer";
+                headerBtn.innerHTML = `
+                    <div class="flex items-center space-x-3 pr-2">
+                        <div class="w-6 h-6 rounded-full bg-darkBorder flex items-center justify-center text-xs font-bold text-gray-300 flex-shrink-0">
+                            ${mIdx + 1}
+                        </div>
+                        <div class="overflow-hidden">
+                            <h4 class="text-xs font-semibold text-gray-200 truncate">${mod.title}</h4>
+                            <span class="text-[10px] text-gray-400">${modPercent}% completado</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-gray-400 font-bold">${isCurrentModule ? '[-]' : '[+]'}</span>
+                `;
+                
+                headerBtn.onclick = () => {
+                    currentModuleIndex = mIdx;
+                    currentLessonIndex = 0;
+                    renderSidebar();
+                    populateLessonSelect();
+                    loadCurrentLesson();
+                };
+
+                moduleDiv.appendChild(headerBtn);
+
+                const lessonsList = document.createElement('div');
+                lessonsList.className = `divide-y divide-darkBorder bg-neutral-900 ${isCurrentModule ? 'block' : 'hidden'}`;
+
+                mod.lessons.forEach((lesson, lIdx) => {
+                    const isSelected = (mIdx === currentModuleIndex && lIdx === currentLessonIndex);
+                    
+                    const lessonItem = document.createElement('div');
+                    lessonItem.className = `p-3 flex items-center justify-between cursor-pointer transition ${isSelected ? 'bg-orange-500/10 border-l-4 border-orange-500' : 'hover:bg-neutral-800/40'}`;
+                    
+                    lessonItem.onclick = () => {
+                        currentModuleIndex = mIdx;
+                        currentLessonIndex = lIdx;
+                        renderSidebar();
+                        populateLessonSelect();
+                        loadCurrentLesson();
+                    };
+
+                    lessonItem.innerHTML = `
+                        <div class="flex items-center space-x-3 pr-2 overflow-hidden">
+                            <div class="w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center text-[10px] font-semibold ${lesson.completed ? 'bg-emerald-500/20 text-emerald-400' : 'bg-darkBorder text-gray-400'}">
+                                ${lIdx + 1}
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="text-xs font-medium truncate ${isSelected ? 'text-orange-400 font-bold' : 'text-gray-300'}">${lesson.title}</p>
+                                ${isSelected ? '<span class="text-[10px] text-orange-400 font-semibold tracking-wider block mt-0.5">Tocando ahora</span>' : `<span class="text-[10px] text-gray-500 block">Duracion: ${lesson.duration}</span>`}
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <span class="text-xs font-bold ${lesson.completed ? 'text-emerald-500' : 'text-gray-600'}">${lesson.completed ? 'OK' : '--'}</span>
+                        </div>
+                    `;
+
+                    lessonsList.appendChild(lessonItem);
+                });
+
+                moduleDiv.appendChild(lessonsList);
+                container.appendChild(moduleDiv);
+            });
+        }
+
+        // Load active lesson info and YouTube iframe
+        function loadCurrentLesson() {
+            const lesson = courseData[currentModuleIndex].lessons[currentLessonIndex];
+            const module = courseData[currentModuleIndex];
+
+            const modBadge = document.getElementById('module-title-badge');
+            const unitIndicator = document.getElementById('unit-indicator-badge');
+            const lessonTitleEl = document.getElementById('current-lesson-title');
+            const descEl = document.getElementById('lesson-description');
+            const selectEl = document.getElementById('lesson-select');
+            const iframe = document.getElementById('youtube-iframe');
+            const completeBtn = document.getElementById('complete-btn');
+
+            if (modBadge) modBadge.innerText = module.title;
+            if (unitIndicator) unitIndicator.innerText = `Unidad ${currentModuleIndex + 1} de ${courseData.length}`;
+            if (lessonTitleEl) lessonTitleEl.innerText = `Clase ${lesson.globalIdx + 1}: ${lesson.title.replace(/^Clase\s*\d+:\s*/i, '')}`;
+            if (descEl) descEl.innerText = lesson.description;
+            if (selectEl) selectEl.value = `${currentModuleIndex}-${currentLessonIndex}`;
+            if (iframe) iframe.src = `https://www.youtube-nocookie.com/embed/${lesson.youtubeId}?autoplay=1&modestbranding=1&rel=0`;
+
+            if (completeBtn) {
+                if (lesson.completed) {
+                    completeBtn.innerText = "Completado";
+                    completeBtn.className = "px-5 py-2.5 bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold rounded-xl transition text-emerald-400 border border-emerald-500/30 shadow-md";
+                } else {
+                    completeBtn.innerText = "Marcar como Completo";
+                    completeBtn.className = "px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold rounded-xl transition text-white shadow-md";
+                }
+            }
+
+            updateOverallProgress();
+        }
+
+        function markCurrentComplete() {
+            const lesson = courseData[currentModuleIndex].lessons[currentLessonIndex];
+            lesson.completed = !lesson.completed; 
+            
+            updateOverallProgress();
+            renderSidebar();
+            loadCurrentLesson();
+            showAlert(lesson.completed ? "Leccion marcada como completada" : "Leccion marcada como pendiente");
+        }
+
+        function navigateLesson(direction) {
+            // Si avanzamos (direction === 1), marcamos automáticamente la lección actual como completada
+            if (direction === 1) {
+                const currentLesson = courseData[currentModuleIndex].lessons[currentLessonIndex];
+                if (!currentLesson.completed) {
+                    currentLesson.completed = true;
+                }
+            }
+
+            currentLessonIndex += direction;
+            
+            if (currentLessonIndex >= courseData[currentModuleIndex].lessons.length) {
+                if (currentModuleIndex < courseData.length - 1) {
+                    currentModuleIndex++;
+                    currentLessonIndex = 0;
+                } else {
+                    currentLessonIndex = courseData[currentModuleIndex].lessons.length - 1;
+                    showAlert("¡Has completado la última lección del curso!");
+                    updateOverallProgress();
+                    renderSidebar();
+                    loadCurrentLesson();
+                    return;
+                }
+            } else if (currentLessonIndex < 0) {
+                if (currentModuleIndex > 0) {
+                    currentModuleIndex--;
+                    currentLessonIndex = courseData[currentModuleIndex].lessons.length - 1;
+                } else {
+                    currentLessonIndex = 0;
+                    showAlert("Estás en la primera lección del curso");
+                    return;
+                }
+            }
+
+            renderSidebar();
+            populateLessonSelect();
+            loadCurrentLesson();
+        }
+
+        function updateOverallProgress() {
+            let totalLessons = 0;
+            let completedLessons = 0;
+
+            courseData.forEach(mod => {
+                mod.lessons.forEach(l => {
+                    totalLessons++;
+                    if (l.completed === true) {
+                        completedLessons++;
+                    }
+                });
+            });
+
+            const percent = totalLessons > 0 ? Math.round((completedLessons / totalLessons) * 100) : 0;
+            const progressEl = document.getElementById('overall-progress-text');
+            if (progressEl) {
+                progressEl.innerText = `${percent}% Completado`;
+            }
+        }
+
+        function showAlert(message) {
+            const modal = document.getElementById('toast-modal');
+            const msgEl = document.getElementById('toast-message');
+            if (!modal || !msgEl) return;
+            msgEl.innerText = message;
+
+            modal.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            modal.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                modal.classList.remove('translate-y-0', 'opacity-100');
+                modal.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        const toggleBtn = document.getElementById('sidebar-toggle');
+        if (toggleBtn) {
+            toggleBtn.onclick = function() {
+                const sidebar = document.getElementById('sidebar');
+                if (sidebar) sidebar.classList.toggle('hidden');
+            };
+        }
+    </script>
+</body>
+</html>
